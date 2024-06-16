@@ -1,402 +1,324 @@
 @extends('user.layouts.app')
+@section('hero')
+    <div class="bg-dark hero-header mb-5 pt-5">
+        <div class="my-4">
+            <div class="align-items-center row">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <div class="container">
+                        <h4 class="text-primary">Tree Removal Specialists
+
+                        </h4>
+                        <h1 class="display-3 text-white animated slideInLeft">Professional Tree Removal Services In
+                            {Location}
+                        </h1>
+                        <p class="text-white animated slideInLeft mb-4 pb-2">Offering top-notch tree removal services in
+                            {Location} by certified arborists.
+
+                        </p>
+                        <a href="tel:123456789"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">123456789</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <img class="img-fluid" src="{{ uploads('home', '2.jpg') }}" style="height:100vh;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
 @section('content')
-    <!-- Start Hero Section -->
-    <div class="hero">
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-6">
-                    <div class="intro-excerpt">
-                        <h1>Professional Tree Trimming in {Location}</h1>
-                        <p class="mb-4">Have an out-of-shape tree that needs to be groomed? Tree trimming is important to
-                            your tree’s aesthetic appeal as we trim overgrowth and extended branches. Trimming is a
-                            necessity if your tree is growing beyond control, posing a threat to nearby structures, power
-                            lines, driveways, or property.
-                            <br>
-                            We are aware of the varied landscape of every state and its cities. Local expertise is an
-                            important factor when going for tree trimming in {Location}. Hiring us as your expert tree
-                            trimming specialists makes sure that a professional job is done, leaving your tree healthy and
-                            stunning.
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="mb-5">Top-Rated Tree Services In {Location} Since 2000
+                </h2>
+                <p>Trees are a wonderful asset to nature but sometimes become a liability if diseased or damaged beyond
+                    recovery. We at The Tree Service Pros provide expert tree removal services in {Location} to effectively
+                    remove these trees and preserve the look of a landscape.
+
+
+                </p>
+                <p>
+
+                    As a certified tree removal company, we do a thorough tree risk assessment to see if the tree can be
+                    saved. If tree removal is the last option, our vetted tree arborists safely remove it through
+                    sophisticated equipment and industry best practices.
+
+
+                </p>
+                <a href="tel:{{ getPhone() }}"
+                    class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-3">
+                        <h2 class="">Why Choose Our Tree Removal Services In {Location}?
+
+                        </h2>
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img-fluid rounded  wow zoomIn" data-wow-delay="0.3s"
+                            src="{{ uploads('home', 'residential-tree-services.webp') }}" alt="">
+                    </div>
+                    <div class="col-lg-9">
+                        <h2 class="">Certified And Experienced Arborists
+                        </h2>
+                        <p>Our ISA-certified tree arborists prioritize the well-being of your landscape. With years of
+                            professional experience in tree removal in {Location} and related services, our team has the
+                            knowledge and techniques to take corrective actions regarding a tree’s health.
+
+                        </p>
+                        <a href="tel:{{ getPhone() }}"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <h2 class="">Comprehensive Tree Risk Assessment
+                        </h2>
+                        <p>As one of the finest tree removal companies in {Location}, our tree risk assessment process
+                            includes two main branches. First, is an area-based assessment of the potential hazards that
+                            humans and animals can face due to a tree. Also, we conduct a tree-based assessment to analyze
+                            how healthy the tree is and whether it poses an above-average level of risk to people and
+                            property nearby.
+
+
+                        </p>
+                        <p>Tree risk assessment helps us manage the risks and dangers of a tree before removal. It helps in
+                            identifying which tree requires timely removal and which one can be saved through care. Our
+                            thorough assessment allows us to do our best to preserve your landscape.
+
+                        </p>
+                        <a href="tel:{{ getPhone() }}"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded  wow zoomIn" data-wow-delay="0.3s"
+                            src="{{ uploads('home', 'residential-tree-services.webp') }}" alt="">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-xxl emergency-section pb-5 pt-6"
+        style="background: linear-gradient(#000000d9, #000000d9),url({{ uploads('home', 'residential-tree-services.webp') }})">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="line mb-5 position-relative text-white">Contact The Tree Service Pros To Get A Free
+                            Estimate For A Professional Tree Removal Service In {Location} Today!
+                        </h2>
+                        <a href="tel:{{ getPhone() }}"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-center text-primary">Our Process – Ensuring Excellence
+                    In Tree Care
+                </h5>
+                <p>Our tree expert company knows that a tailored tree service process is required based on the specific
+                    needs of different landscapes and environments in {Location}. Hiring our expertly-vetted tree
+                    service in
+                    {Location} can be explained through the following steps:
+                </p>
+            </div>
+            <ul class="timeline list-unstyled">
+                @foreach ($processes as $key => $process)
+                    <li class="timeline-item">
+                        <div class="row {{ $key % 2 != 0 ? 'text-end flex-column-reverse' : '' }}">
+                            <div class="col-md-6 order-md-2">
+                                <div class="rounded timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ $process->heading }}</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>{{ $process->name }}.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-md-6 order-md-1 d-flex align-items-center justify-content-md-end justify-content-center">
+                                <div class="timeline-badge  rounded-circle">{{ $key + 1 }}</div>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row  mb-3">
+                    <div class="col-lg-12 text-center">
+                        <h4>Types Of {{ $service->name }} Services We Offer In {Location}
+                        </h4>
+                    </div>
+                </div>
+                @foreach ($service_type as $key => $item)
+                    <div class="row align-items-center mb-3 {{ $key % 2 != 0 ? ' flex-row-reverse' : '' }}">
+                        <div class="col-lg-6">
+                            <img class="img-fluid rounded  wow zoomIn" data-wow-delay="0.3s"
+                                src="{{ uploads('service', $item->image) }}" alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="">{{ $item->heading }}</h2>
+                            <p>{{ $item->content }}
+                            </p>
+                            <a href="tel:{{ getPhone() }}"
+                                class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+                        </div>
+                    </div>
+                @endforeach
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container-xxl emergency-section pb-5 pt-6"
+        style="background: linear-gradient(#000000d9, #000000d9),url({{ uploads('home', 'residential-tree-services.webp') }})">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+                    <div class="col-12">
+                        <div class=" mb-5  line position-relative">
+
+                            <h2 class="text-white">Contact The Tree Service Pros To Get A Free Estimate For A Professional
+                                Tree Removal Service In {Location} Today!
+                            </h2>
+                        </div>
+
+                        <a href="tel:{{ getPhone() }}"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="">Compliant And Up-To-Date With {Location} Regulations
+                        </h2>
+                        <p>According to local ordinance laws in the US, every property owner has the right of self-help
+                            where they can remove a tree completely or part of it in case it invades their property.
+
+
+                        </p>
+                        <p>As a certified tree removal company in {Location}, our tree arborists have all the necessary
+                            permits, licenses, and qualifications required to take down a tree. We also take care of the
+                            environment by making sure our tree removal is done efficiently without any damage to the
+                            environment and surrounding structures.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <h2 class="">Cost Of Tree Removal Services In {Location}
+
+                        </h2>
+                        <p>The cost of a tree removal service in {Location} mainly depends on the size, type, and age of the
+                            tree. Tree removal prices also vary on the area where the tree is located and how much effort
+                            will be required to remove it. Our tree removal service in {Location} not only accounts for
+                            removing the tree but also includes complete aftercare of your landscape after the process. The
+                            average tree removal cost can be $200 for small trees which can go up to $2,000 for large trees.
+
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <h2 class="">Why Trust The Tree Service Pros?
+
+
+                        </h2>
+                        <p>We tick all the boxes of being a trusted and reliable tree removal company in {Location}. Apart
+                            from having up-to-date licenses for tree services, we have valid insurance and endorsements from
+                            companies making us the best option for your tree removal needs. Hear it out from our customers
+                            yourself.
+
+
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-img-wrap">
-                        <img src="{{ uploads('home', '7.jpg') }}" class="img-fluid">
-                    </div>
-                </div>
+
+
             </div>
+
         </div>
     </div>
-    <!-- End Hero Section -->
-    <div class="we-help-section">
+    <div class="container-xxl emergency-section pb-5 pt-6"
+        style="background: linear-gradient(#000000d9, #000000d9),url({{ uploads('home', 'residential-tree-services.webp') }})">
         <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ uploads('home', '3.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
+                    <div class="col-12">
+                        <div class=" mb-5  line position-relative">
 
-                    <h2>Why Choose The Tree Service Pros for Tree Trimming in {Location}</h2>
-                    <p>The Tree Service Pros have been providing professional tree trimming services in {Location} for over
-                        20 years. Our local tree trimmers in {Location} professionally trim your tree, bringing it to its
-                        best shape, and ensuring the safety of it and the people around it.
-                        <br>
-                        While offering over-the-top services to our clients, we have kept our tree service prices extremely
-                        affordable. We aim to groom your tree in the best way possible, elevating the look of your landscape
-                        without leaving a hole in your wallet.
+                            <h2 class="text-white">
+                                Want Emergency Tree Removal Services?
 
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Start Why Choose Us Section -->
-    <div class="bg-white why-choose-section">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-12">
-                    <h2 class="section-title">Benefits of Professional Tree Trimming Services in {Location}
-                    </h2>
-                    <p>As an experienced tree care company, we strive to provide the best tree services to our valuable
-                        customers. Here is what we do:</p>
-
-                    <div class="row my-5">
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Enhancing Tree Health and Longevity</h3>
-                                <p>A certified tree trimming company in {Location} like The Tree Service Pros always puts
-                                    your tree’s health at priority. Since tree branches are prone to diseases due to pest
-                                    infestations, regular tree trimming is recommended. Through tree trimming, we can
-                                    enhance your tree’s health and improve its chances of living for many more years to
-                                    come.
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Improving Aesthetics and Property Value
-                                </h3>
-                                <p>Our tree trimming service greatly improves the look of your landscape and increases its
-                                    curb appeal. For people who are looking to rent out or sell their property in the
-                                    future, we recommend maintaining the trees through our tree trimming.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Safety and Risk Reduction</h3>
-                                <p>Our professional tree trimming in {Location} helps mitigate the risk involved with the
-                                    overgrowth of trees. Overly extended trees may harm surrounding structures and property
-                                    posing a safety threat to driveways and being extremely close to power lines.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-    <!-- End Why Choose Us Section -->
-    <!-- Start Why Choose Us Section -->
-    <div class=" why-choose-section">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-12">
-                    <h2 class="section-title">Our Expert Tree Trimming Process
-                    </h2>
-                    <p>Our professional tree trimmers in {Location} follow the given step-by-step process to provide you
-                        with the perfect tree trimming service:
-                    </p>
-
-                    <div class="row my-5">
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Initial Consultation</h3>
-                                <p>When you first contact The Tree Service Pros, our ISA-certified tree arborists reach out
-                                    to you and schedule a visit to your place. During the visit, they do a thorough
-                                    inspection of the trees before getting on with the tree trimming process.
-
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Tree Trimming Plan Development
-                                </h3>
-                                <p>Based on the inspection carried out by our expert tree specialists, a tree trimming plan
-                                    is developed. The customized plan highlights specific cuts to be made to the trees and
-                                    the goal needed to be achieved through trimming.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Pre-Trimming Preparation
-                                </h3>
-                                <p>Our groundsmen secure the work area for tree trimming, making sure surrounding utilities,
-                                    properties, and people are protected.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Safe and Precise Trimming
-                                </h3>
-                                <p>Our licensed tree trimmers in {Location} use high-tech cutting machinery and advanced
-                                    techniques to precisely trim down the tree, keeping safety a top priority. After the
-                                    trimming, we apply wound dressing to larger cuts, allowing them to heal rapidly.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4">
-                            <div class="feature">
-                                <h3>Cleanup and Post-Trimming Care</h3>
-                                <p>Once trimming is complete, our staff cleans up the landscape of all tree branches,
-                                    debris, wood chippings, and leaves, disposing them off properly. Our knowledgeable tree
-                                    arborists provide you with any needed recommendations and actions for tree care
-                                    post-trimming.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-    <!-- End Why Choose Us Section -->
-    <div class="bg-white we-help-section">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ uploads('home', '3.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-
-                    <h2>Tree Trimming vs Tree Pruning: What’s the Difference?</h2>
-                    <p>We offer both tree trimming and tree pruning services in {Location}. While they both seem to be the
-                        same, they hold some prominent differences.
-                        <br>
-                        Our Tree pruning involves cutting down dead, diseased, or weak tree branches that affect the overall
-                        health of the tree. Its sole purpose is to improve the health of the tree, giving it more healthy
-                        years to live.
-                        <br>
-                        On the other hand, our tree trimming service is concerned with trimming down overgrown branches that
-                        either invade surrounding properties, pose damage to nearby structures, or negatively affect the
-                        tree’s aesthetic look.
-
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Start Why Choose Us Section -->
-    <div class=" why-choose-section">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-12">
-                    <h2 class="section-title">Types of Tree Trimming Services We Offer in {Location}</h2>
-
-
-                    <div class="row my-5">
-                        <div class="col-6 col-md-6">
-                            <div class="feature">
-                                <h3>Crown Thinning</h3>
-                                <p>Our tree trimming company in {Location} offers a variety of tree trimming services,
-                                    including crown thinning. We remove small to medium-sized tree branches to improve light
-                                    penetration, air circulation and reduce the risk of disease. Thinning helps the tree
-                                    grow healthily and improves its aesthetic appeal as well.
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-6">
-                            <div class="feature">
-                                <h3>Crown Raising
-                                </h3>
-                                <p>The most common type of tree trimming service we provide in {Location} is crown raising.
-                                    This includes trimming down the lower branches of your tree to a desirable height by our
-                                    certified arborists. Crown raising protects power lines, driveways, and offers clearance
-                                    for cars and pedestrians.
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-6">
-                            <div class="feature">
-                                <h3>Crown Reduction
-
-                                </h3>
-                                <p>Our crown reduction service is best preferred when a tree is bulky, increasing its chance
-                                    of getting affected by storm damage. Crown reduction by our tree trimmers is focused on
-                                    removing large tree branches located around the outer canopy of the tree. It also helps
-                                    decrease the tree’s weight and allows more sunlight for surrounding landscaping.
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-6">
-                            <div class="feature">
-                                <h3>Deadwooding
-                                </h3>
-                                <p>Our deadwooding service involves removing dead, diseased, or broken branches from the
-                                    tree. Since dead and diseased branches are at risk of falling and affected by pest
-                                    infestation, it is best to cut them off through deadwooding at the earliest.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-    <!-- End Why Choose Us Section -->
-    <div class="bg-white we-help-section">
-        <div class="container">
-            <div class="row justify-content-around">
-
-                <div class="col-lg-6 mb-5 mb-lg-0">
-
-                    <h2>The Best Time for Tree Trimming in {Location}</h2>
-                    <p>Most tree species grow in full form during spring and summer when they are also most susceptible to
-                        diseases and pests. Our seasonal tree trimming in {Location} is best when the trees are dormant
-                        during the winters, meaning they grow slowly and are prevented from diseases. We usually trim the
-                        trees during winter, allowing them to grow healthily afterward.
-                        <br>
-                        However, when natural calamities such as storms are a risk, our dedicated tree arborists in
-                        {Location} provide emergency tree service on a call. Our experts take prompt action in storm-related
-                        trimming, minimizing the risk of damage caused by it.
-                    </p>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ uploads('home', '3.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="we-help-section">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ uploads('home', '3.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-
-                    <h2>Understanding Tree Trimming Costs in {Location}
-                    </h2>
-                    <p>Several factors influence our tree trimming costs in {Location} such as the tree species, size, and
-                        condition of the tree. Some tree types such as oak and acacia have really strong branches, requiring
-                        specialized cutting machinery and additional effort to trim. Tree trimming prices also depend on the
-                        location where a tree is located. If a tree is really close to a powerline or a busy driveway, then
-                        the cost to trim it is higher.
-                        <br>
-                        The average cost of tree trimming in {Location} is around $270 for small trees (10-20 ft) up to
-                        $1,800 for large trees (60ft and beyond). The Tree Service Pros is known to offer the most
-                        affordable prices to its clients. We offer special prices for multiple tree consignments and also
-                        offer dedicated tree cutting service if a tree’s health is beyond recovery and cutting is found to
-                        be the best option.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- End We Help Section -->
-    <div class="bg-white we-help-section">
-        <div class="container">
-            <div class="row justify-content-around">
-
-                <div class="col-lg-6 mb-5 mb-lg-0">
-
-                    <h2>Ready to Trim Your Trees in {Location}?</h2>
-                    <p>If you are in search of reliable tree trimming in {Location} nearby, contact The Tree Service Pros
-                        today and get a free estimate from our certified tree arborists. Our tree trimming company offers a
-                        deal of other professional services such as stump removal and stump grinding if you already have a
-                        cut-down tree with a leftover stump.
-                        <br>
-                        Whatever your needs are, we offer the most trusted tree services in {Location} tailored to the
-                        unique needs of your landscape. Call us today and book a consultation with our tree specialists!
-
-                    </p>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ uploads('home', '3.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End We Help Section -->
-    <!-- End Why Choose Us Section -->
-    <div class=" why-choose-section">
-        <div class="container">
-
-
-            <div class="justify-content-around my-5 row">
-                <div class="col-lg-12">
-                    <h2>We are available 24/7! Call us to schedule a visit from our certified arborist at the date and time
-                        of your convenience.
-
-                        {{ getPhone() }}
-
-                    </h2>
-
-                </div>
-            </div>
-            <div class="justify-content-around my-5 row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-wrap">
-                        <img src="{{ userFile('images/img-grid-1.jpg') }}" alt="{{ getTitle() }}">
-                    </div>
-                </div>
-                <div class="accordion col-lg-6" id="accordionExample">
-                    @foreach ($faqs as $index => $faq)
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading{{ $faq->id }}">
-                                <button class="accordion-button {{ $index == 0 ? '' : 'collapsed' }}" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
-                                    aria-expanded="{{ $index == 0 ? 'true' : 'false' }}"
-                                    aria-controls="collapse{{ $faq->id }}">
-                                    {{ $faq->question }}
-                                </button>
                             </h2>
-                            <div id="collapse{{ $faq->id }}"
-                                class="accordion-collapse collapse {{ $index == 0 ? 'show' : '' }}"
-                                aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    {{ $faq->answer }}
-                                </div>
-                            </div>
+                            <p>Be it lightning-fast consultation, expert recommendations, and highly advanced tree removal,
+                                we offer it all. Our local tree arborists in {Location} provide your landscape with the care
+                                it deserves through personalized tree removal in {Location}.
+
+                            </p>
+                            <p>So what’s the wait for? Call us today and receive a free tree removal estimate from our
+                                expertly vetted tree specialists!
+
+                            </p>
                         </div>
-                    @endforeach
+                        <a href="tel:{{ getPhone() }}"
+                            class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ getPhone() }}</a>
+                    </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
+    {{-- ///////////////// --}}
+
+    
 @endsection

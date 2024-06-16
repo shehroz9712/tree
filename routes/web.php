@@ -14,16 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::name('user.')->group(
-    function () {
-        Route::get('/', 'IndexController@index')->name('index');
-        Route::get('/about', 'IndexController@about')->name('about');
-        Route::get('/services', 'IndexController@service')->name('services');
-        Route::get('/service{slug}', 'IndexController@service')->name('service');
-        Route::get('/blog', 'IndexController@blog')->name('blog');
-        Route::get('/contact', 'IndexController@contact')->name('contact');
-        Route::get('/{slug}', 'IndexController@about')->name('page');
-        Route::get('/faqs', 'IndexController@about')->name('faqs');
-        // Route::get('/', 'IndexController@about')->name('about');
-    }
-);
+Route::name('user.')->group(function () {
+    // Default route, accessible at root '/'
+    Route::get('/', 'IndexController@index')->name('index');
+
+    // Route with optional State and city parameters
+    Route::get('home/{State?}/{city?}', 'IndexController@index')->name('index');
+    Route::get('/about/{State?}/{city?}', 'IndexController@about')->name('about');
+    Route::get('/services/{State?}/{city?}', 'IndexController@service')->name('services');
+    Route::get('/service/{slug}/{State?}/{city?}', 'IndexController@service')->name('service');
+    Route::get('/blog', 'IndexController@blog')->name('blog');
+    Route::get('/contact/{State?}/{city?}', 'IndexController@contact')->name('contact');
+    Route::post('/contact/submit', 'IndexController@contact')->name('contact.submit');
+    Route::get('/faqs/{State?}/{city?}', 'IndexController@about')->name('faqs');
+    Route::get('/{slug}', 'IndexController@about')->name('page');
+});

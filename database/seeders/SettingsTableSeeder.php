@@ -24,7 +24,7 @@ class SettingsTableSeeder extends Seeder
             'email'           => 'info@thetreeservicepro.com',
             'phone'           => '123456789',
             'address'         => '23 Ranking Street, New York',
-            'dark-logo'       => 'logo.webp',
+            'dark-logo'       => 'Darklogo.webp',
             'logo'            => 'logo.webp',
             'favicon'         => 'favicon.png',
             'facebook'        => 'facebook.com',

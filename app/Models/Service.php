@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+    public function processes()
+    {
+        return $this->morphMany(Process::class, 'type');
+    }
 }
